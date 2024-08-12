@@ -1,0 +1,23 @@
+
+1. In what way did you "clean up" or divide up the text into words (in the program; the text files should be left
+unaffected)? This does not have to be perfect in any sense, but it should at least avoid counting "lord",
+"Lord" and "lord." as different words.
+
+Answer to 1:  
+We cleaned up the text into words so that a word is a sequence of characters from a text after removing
+punctuation marks and digits. It consists of alphabetic characters only and is converted to lowercase. Each word is separated from the next by whitespace.
+
+
+
+
+2. Which data structures have you used (such as lists, tuples, dictionaries, sets, ...)? Why does that choice
+make sense? You do not have to do any extensive research on the topics, or try to find exotic modern data
+structures, but you should reflect on which of the standard data types (or variants thereof) make sense. If
+you have tried some other solution and updated your code later on, feel free to discuss the effects!
+
+Answer to 2:
+We store all the words in a tuple, because tuple uses less memory space than lists, dictionaries etc.
+To generate text with successions, we decided to use dictionary where we save the words as keys and the values as index of all the successors.
+This makes it so that we only need to go through all words once, and when we want a successor word, we randomize an index and get the word with the index. 
+The computational time will be quick when generating successor words since we only need to look up the index in the dictionary and access the word with the index. 
+
